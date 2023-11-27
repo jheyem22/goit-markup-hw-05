@@ -142,8 +142,9 @@ address {
 .nav-menu .current-page:focus,
 .contacts-menu .contact:hover,
 .contacts-menu .contact:focus {
-  color: var(--iris);
+  color: 250ms var(--iris);
 }
+
 
 .nav-menu .item:not(:last-child),
 .contacts-menu .item:not(:last-child) {
@@ -152,7 +153,7 @@ address {
 
 .nav-menu .page:hover {
   border-bottom: 5px solid var(--OCEAN);
-  transition: cubic-bezier(0, 0.76, 0.18, 1);
+  transition: 250ms cubic-bezier(0, 0.76, 0.18, 1);
   border-radius: 2px;
 }
 
@@ -267,10 +268,10 @@ address {
   fill: var(--cloud);
 }
 .soc:hover {
-  background: var(--green);
+  background: 250ms var(--green);
 }
 .teams-socmedia .soc:hover {
-  background: var(--OCEAN);
+  background: 250ms var(--OCEAN);
 }
 li a {
   line-height: 0;
@@ -525,7 +526,7 @@ li a {
 .customers .company:hover,
 .customers .company:focus {
   border: 1px solid var(--OCEAN);
-  color: var(--OCEAN);
+  color: 250ms var(--OCEAN);
 }
 
 /* .client {
