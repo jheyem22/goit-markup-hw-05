@@ -47,6 +47,10 @@ a {
   text-decoration: none;
 }
 
+li a {
+  line-height: 0;
+}
+
 *,
 *::after,
 *::before {
@@ -181,6 +185,43 @@ address {
 .footercontent .left-item .socmed-item {
   flex-basis: calc((100% -120px) / 2);
 }
+.footer-form {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-form button {
+  height: 40px;
+  border-radius: 4px;
+  padding: 8px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background: var(--iris);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: all var(--transition-duration) var(--animation-timing-function);
+}
+.footer-form input {
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid var(--white);
+  padding: 8px 16px;
+  color: var(--white);
+  background: transparent;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: all var(--transition-duration) var(--animation-timing-function);
+}
+.footer-form button svg {
+  fill: var(--white);
+  margin-left: 8px;
+}
+.modal.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.95);
+}
 /*SOCIAL CONTENT*/
 
 .socmed-item {
@@ -213,19 +254,6 @@ address {
   flex-basis: calc((100% - 50px) / 4);
 }
 
-.soc {
-  background-color: #4d5ae5;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .socmed-text {
   font-family: var(--font-family-roboto);
@@ -274,24 +302,31 @@ address {
 .soc:hover {
   background: 250ms var(--green);
 }
-.teams-socmedia .soc:hover {
-  background: 250ms var(--OCEAN);
+.teams-socmedia .soc:hover,
+.teams-socmedia .soc:focus {
+  background-color: var(--green);
+  cursor: pointer;
+  color: var(--OCEAN);
+}
+.socmed-item .socmedia .soc:hover,
+.socmed-item .socmedia .soc:focus {
+  background-color: var(--green);
+  cursor: pointer;
+  color: var(--OCEAN);
 }
 .teams-socmedia .soc{
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
   color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-li a {
-  line-height: 0;
-}
+
+
 /*HERO - 1st section*/
 
 .hero {
   background-color: var(--navyblue);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
+      rgba(46, 47, 66, 0.7)),
     url("../images/hero-office.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -455,17 +490,7 @@ li a {
     0px 2px 2px 0px rgba(46, 47, 66, 0.16),
     0px 2px 7px 0px rgba(46, 47, 66, 0.08);
 }
-/*
-.teamcard {
-  background-color: var(--white-color);
-  padding: 32px 20px;
-  border: 1px solid #eeeeee;
-  border-top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}*/
+
 .teams-socmedia {
   display: flex;
   justify-content: center;
@@ -537,48 +562,6 @@ li a {
   color: 250ms var(--OCEAN);
 }
 
-/* .client {
-  fill: var(--lightslate);
-}
-.company :hover,
-.company :focus {
-  border-color: var(--OCEAN);
-  fill: var(--OCEAN);
-}
-.customers .client :hover,
-.customers .client :focus {
-  border-color: var(--OCEAN);
-  fill: var(--OCEAN);
-} */
-/* .client:hover,
-.client:focus {
-  fill: var(--OCEAN);
-} */
-/*
-.company:hover,
-.company:focus {
-  border-color: var(--OCEAN);
-  cursor: pointer;
-}
-.customers:hover,
-.customers:focus {
-  border-color: var(--OCEAN);
-  cursor: pointer;
-}
-.customers:hover svg,
-.customers:focus svg {
-  fill: var(--OCEAN);
-} */
-/* .customers .item:hover,
-.customers .item:focus {
-  border-color: var(--OCEAN);
- 
-  fill: var(--OCEAN);
-} */
-/*
-.customers .company .client {
-  fill: var(--lightslate);
-}*/
 /*PORTFOLIO*/
 .portfolio {
   display: flex;
