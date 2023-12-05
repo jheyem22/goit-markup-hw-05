@@ -136,11 +136,23 @@ address {
   font-size: 16px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  position: relative;
 }
+
 .nav-menu .current-page {
   color: var(--OCEAN);
-  border-bottom: 5px solid var(--OCEAN);
   transition: cubic-bezier(0, 0.76, 0.18, 1);
+}
+
+.nav-menu.current-page ::after{
+  content: '';
+  background-color: var(--OCEAN);
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  border-radius: 2px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-menu .page:hover,
@@ -158,12 +170,9 @@ address {
   margin-right: 40px;
 }
 
-.nav-menu .page:hover {
-  border-bottom: 5px solid var(--OCEAN);
-  transition: 250ms cubic-bezier(0, 0.76, 0.18, 1);
-  border-radius: 2px;
+.nav-menu.contacts-menu.item.contact{
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
-
 /*FOOTER CONTENT*/
 .footer {
   background-color: var(--navyblue);
